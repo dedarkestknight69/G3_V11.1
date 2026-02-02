@@ -426,7 +426,7 @@
                         <h3 class="font-serif text-2xl font-bold text-primary-green mb-6">Send Us a Message</h3>
 
                         <form id="contactForm"
-                            action="https://docs.google.com/forms/d/e/1FAIpQLSfzU86rnAMwvNc0I8nvCglR6mYW9iMk2xoXfTyhCi8CWMUlgQ/viewform"
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSfzU86rnAMwvNc0I8nvCglR6mYW9iMk2xoXfTyhCi8CWMUlgQ/formResponse"
                             method="POST" target="hidden_iframe">
                             <div class="grid gap-6">
                                 <div>
@@ -701,7 +701,7 @@
     <script>
         // Flag to track form submission
         var submitted = false;
-        
+
         // Services data organized by categories
         const servicesData = {
             "Core Accounting": [
@@ -1054,11 +1054,9 @@
         let serviceSelector;
         document.addEventListener('DOMContentLoaded', function () {
             serviceSelector = new ServiceSelector();
-        });
 
-        // Form submission handling
-
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            // Form submission handling
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
             const button = this.querySelector('button[type="submit"]');
             const successMessage = document.getElementById('success-message');
 
@@ -1072,7 +1070,7 @@
 
             // Let the form submit to Google Forms (don't prevent default)
             // The hidden iframe will handle the response
-            
+
             // Show success message after a delay
             setTimeout(function () {
                 successMessage.classList.remove('hidden');
@@ -1094,31 +1092,31 @@
             }, 1000);
         });
 
-        // Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('nav-mobile-menu');
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('nav-mobile-menu');
 
-        if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', function () {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function () {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
 
-        // Intersection Observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 
 
 </html>
-
