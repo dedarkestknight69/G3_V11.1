@@ -695,10 +695,13 @@
     </footer>
 
     <!-- Hidden iframe for form submission -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
+        // Flag to track form submission
+        var submitted = false;
+        
         // Services data organized by categories
         const servicesData = {
             "Core Accounting": [
@@ -1054,7 +1057,6 @@
         });
 
         // Form submission handling
-        var submitted = false;
 
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             const button = this.querySelector('button[type="submit"]');
@@ -1068,12 +1070,17 @@
 
             submitted = true;
 
+            // Let the form submit to Google Forms (don't prevent default)
+            // The hidden iframe will handle the response
+            
+            // Show success message after a delay
             setTimeout(function () {
                 successMessage.classList.remove('hidden');
                 document.getElementById('contactForm').reset();
 
                 // Reset service selector
                 serviceSelector.selectedServices.clear();
+                serviceSelector.tempSelectedServices.clear();
                 serviceSelector.updateDisplay();
                 serviceSelector.updateHiddenInput();
 
