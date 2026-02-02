@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="G3 Accounting Limited Services - Cloud Accounting, ERP Implementation, Virtual CFO, Bank Financing, Special Projects, and Training." />
+    <title>G3 Accounting Limited - Services</title>
+    <link rel="canonical" href="services.html" />
+
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#1F4028',
+                        'dark-green': '#152e1d',
+                        'accent-gold': '#C19B63',
+                        'cta-gold-btn': '#D2B48C',
+                        'light-bg': '#F5F7F6',
+                        'text-dark': '#2c2c2c',
+                        'text-light-grey': '#6c757d',
+                        'cta-heading-color': '#2D2D2D',
+                        'cta-text-color': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'lg': '12px',
+                        'btn': '30px',
+                    },
+                    transitionProperty: {
+                        'shadow': 'box-shadow',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="text-text-dark flex flex-col min-h-screen">
+
+    <!-- HEADER/NAVIGATION -->
+    <header class="shadow-md bg-white sticky top-0 z-50 fade-in" role="banner">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+            aria-label="Main navigation">
+            <a class="flex items-center" href="index.html">
+                <img src="g3_logo.png" alt="G3 Accounting Limited" class="h-12 w-auto">
+            </a>
+
+            <button
+                class="lg:hidden text-primary-green p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold"
+                aria-controls="nav-mobile-menu" aria-expanded="false" id="mobile-menu-toggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                <ul class="flex space-x-6 items-center" role="menubar">
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="index.html">Home</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="about.html">About</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm active" role="menuitem"
+                            href="services.html">Services</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="why-choose.html">Why Choose Us</a></li>
+                    <li role="none" class="lg:ml-3">
+                        <a class="btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md"
+                            role="menuitem" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="nav-mobile-menu" class="nav-mobile-menu hidden lg:hidden bg-light-bg py-4 border-t border-gray-200">
+            <ul class="flex flex-col space-y-2 px-4" role="menu" aria-labelledby="mobile-menu-toggle">
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="index.html">Home</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="about.html">About</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark active font-medium"
+                        role="menuitem" href="services.html">Services</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="why-choose.html">Why Choose Us</a></li>
+                <li role="none">
+                    <a class="block text-center mt-2 btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 shadow-md"
+                        role="menuitem" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-primary-green text-white py-16 sm:py-24 text-center" role="region" aria-labelledby="pageTitle">
+        <div class="container mx-auto px-4">
+            <h1 id="pageTitle" class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium italic mb-4 fade-in">Our
+                Services</h1>
+            <p class="text-lg sm:text-xl font-light opacity-90 max-w-2xl mx-auto mt-4 fade-in"
+                style="transition-delay:.08s">Comprehensive accounting and business solutions tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main role="main">
+
+        <!-- Primary Services Grid Section -->
+        <section class="py-16 sm:py-20 bg-white px-4" aria-labelledby="servicesHeading">
+            <div class="container mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 id="servicesHeading" class="font-serif text-3xl sm:text-4xl font-bold text-primary-green">
+                        Comprehensive Solutions for Your Business</h2>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+
+                    <!-- Real-Time Cloud Accounting -->
+                    <article class="service-card fade-in">
+                        <div class="icon-circle" aria-hidden="true"><i class="fas fa-cloud"></i></div>
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">Real-Time Cloud Accounting
+                        </h3>
+                        <p class="mb-4 text-text-light-grey text-sm">Move to a modern digital finance environment with
+                            secure, accessible data.</p>
+                        <ul class="card-service-list list-none p-0 flex-grow" role="list">
+                            <li>Cloud accounting setup (Xero, MYOB Online, QuickBooks Online)</li>
+                            <li>Real-time dashboards & analytics</li>
+                            <li>Automated bank feeds & online approvals</li>
+                            <li>Digital invoicing & receipt capture</li>
+                        </ul>
+                    </article>
+
+                    <!-- ERP Implementation -->
+                    <article class="service-card fade-in" style="transition-delay:.06s">
+                        <div class="icon-circle" aria-hidden="true"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">ERP Implementation &
+                            Integration</h3>
+                        <p class="mb-4 text-text-light-grey text-sm">Transform your finance operations through powerful
+                            ERP systems.</p>
+                        <ul class="card-service-list list-none p-0 flex-grow" role="list">
+                            <li>CIVICA CEF, Xero & MYOB ERP implementations</li>
+                            <li>Chart of accounts redesign</li>
+                            <li>Data migration & go-live support</li>
+                            <li>Workflow automation (billing, procurement, payroll, assets)</li>
+                        </ul>
+                    </article>
+
+                    <!-- Virtual CFO -->
+                    <article class="service-card fade-in" style="transition-delay:.12s">
+                        <div class="icon-circle" aria-hidden="true"><i class="fas fa-user-tie"></i></div>
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">Virtual CFO & Financial
+                            Advisory</h3>
+                        <p class="mb-4 text-text-light-grey text-sm">On-demand senior financial leadership for strategic
+                            decision making.</p>
+                        <ul class="card-service-list list-none p-0 flex-grow" role="list">
+                            <li>Budgeting & forecasting</li>
+                            <li>Performance dashboards</li>
+                            <li>Cost saving & profitability reviews</li>
+                            <li>Loan preparation & bank negotiations</li>
+                            <li>Board reports & governance support</li>
+                            <li>Company secretarial services</li>
+                        </ul>
+                    </article>
+
+                    <!-- Special Projects -->
+                    <article class="service-card fade-in lg:col-start-1 lg:col-end-2" style="transition-delay:.18s">
+                        <div class="icon-circle" aria-hidden="true"><i class="fas fa-clipboard-check"></i></div>
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">Special Projects & Clean-Up
+                        </h3>
+                        <p class="mb-4 text-text-light-grey text-sm">For companies needing recovery, structure, or
+                            immediate compliance.</p>
+                        <ul class="card-service-list list-none p-0 flex-grow" role="list">
+                            <li>Multi-year accounts reconstruction</li>
+                            <li>Audit preparation (Audit readiness)</li>
+                            <li>GL clean-up</li>
+                            <li>Donor project financial reporting (ADB, USAID, World Bank)</li>
+                            <li>School fee & enrolment audits</li>
+                            <li>Government projects, DSIP, PSIP, Grants Acquittals</li>
+                        </ul>
+                    </article>
+
+                    <!-- Training -->
+                    <article class="service-card fade-in lg:col-start-2 lg:col-end-3" style="transition-delay:.24s">
+                        <div class="icon-circle" aria-hidden="true"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">Training & Capacity Building
+                        </h3>
+                        <p class="mb-4 text-text-light-grey text-sm">Empower your staff with essential financial &
+                            systems capability.</p>
+                        <ul class="card-service-list list-none p-0 flex-grow" role="list">
+                            <li>ERP / Xero / MYOB training</li>
+                            <li>Finance for non-finance managers</li>
+                            <li>Internal control workshops</li>
+                            <li>Budgeting & forecasting training</li>
+                            <li>Directors corporate governance & finance training</li>
+                        </ul>
+                    </article>
+
+                    <div class="hidden lg:block lg:col-start-3 lg:col-end-4 flex flex-col justify-center items-center fade-in"
+                        style="transition-delay:.30s">
+                        <div class="p-8 text-center bg-light-bg rounded-lg h-full flex flex-col justify-center">
+                            <h3 class="font-serif text-xl font-bold text-primary-green mb-3">Need something else?</h3>
+                            <p class="text-sm text-text-light-grey mb-4">We tailor our services to your specific
+                                business needs.</p>
+                            <a href="contact.html"
+                                class="inline-block text-accent-gold font-bold hover:text-primary-green transition">Contact
+                                Us <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bank Interface & Financing -->
+        <section class="py-16 sm:py-24 bg-light-bg relative overflow-hidden" aria-labelledby="financeHeading">
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-accent-gold opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2">
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-start">
+
+                    <div class="lg:col-span-7 fade-in">
+                        <div
+                            class="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-sm mb-6 border border-gray-100">
+                            <i class="fas fa-hand-holding-dollar text-accent-gold"></i>
+                            <span class="text-sm font-bold text-primary-green tracking-wide uppercase">Trusted Financial
+                                Intermediary</span>
+                        </div>
+                        <h2 id="financeHeading"
+                            class="font-serif text-3xl sm:text-4xl font-bold text-primary-green mb-6">Bank Interface &
+                            Financing Support</h2>
+                        <p class="text-lg text-text-light-grey mb-6 leading-relaxed">
+                            G3 acts as your trusted financial intermediary to help you secure the right financing at the
+                            right time to support your growth, cash flow, and major projects. We navigate the
+                            complexities of bank financing so you don't have to.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                            <ul class="card-service-list list-none p-0" role="list">
+                                <li>Short-term financing</li>
+                                <li>Medium- to long-term financing</li>
+                                <li>Project financing (construction, infrastructure, expansion)</li>
+                                <li>Working capital support</li>
+                                <li>Overdraft facilities</li>
+                            </ul>
+                            <ul class="card-service-list list-none p-0" role="list">
+                                <li>Asset financing (vehicles, plants, equipment)</li>
+                                <li>Refinancing of high-interest loans</li>
+                                <li>Debt restructuring</li>
+                                <li>Bridging finance</li>
+                                <li>Term loans & business loans</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 fade-in" style="transition-delay:.2s">
+                        <div
+                            class="support-box rounded-lg p-8 sm:p-10 shadow-xl transform lg:translate-y-6 relative border-t-4 border-accent-gold">
+                            <h3 class="font-serif text-2xl font-bold text-white mb-6">How We Support You</h3>
+
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div
+                                        class="flex-shrink-0 h-8 w-8 rounded-full bg-accent-gold flex items-center justify-center mt-1">
+                                        <i class="fas fa-file-contract text-white text-sm"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium text-lg">Proposals & Documentation</h4>
+                                        <p class="text-white/70 text-sm mt-1">We prepare bank-ready financial proposals,
+                                            repayment schedules, and full loan documentation packs.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div
+                                        class="flex-shrink-0 h-8 w-8 rounded-full bg-accent-gold flex items-center justify-center mt-1">
+                                        <i class="fas fa-handshake text-white text-sm"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium text-lg">Presentation & Negotiation</h4>
+                                        <p class="text-white/70 text-sm mt-1">We present your case to BSP, Kina Bank,
+                                            Westpac, Credit Corp, or PPL and negotiate terms and rates.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div
+                                        class="flex-shrink-0 h-8 w-8 rounded-full bg-accent-gold flex items-center justify-center mt-1">
+                                        <i class="fas fa-check-circle text-white text-sm"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-white font-medium text-lg">Post-Approval Compliance</h4>
+                                        <p class="text-white/70 text-sm mt-1">We ensure ongoing compliance with bank
+                                            covenants after your loan is approved.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-6 border-t border-white/10">
+                                <a href="contact.html"
+                                    class="inline-block w-full text-center bg-white text-primary-green font-bold py-3 rounded-btn hover:bg-accent-gold hover:text-white transition duration-300 shadow-md">
+                                    Discuss Financing Options
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA Row -->
+        <section class="py-16 bg-white px-4">
+            <div class="container mx-auto">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="service-card bg-light-bg border-none fade-in" style="background-color: #F5F7F6;">
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">Why clients choose our
+                            services</h3>
+                        <p class="text-text-light-grey mb-6">Local knowledge, international standards — delivered with
+                            integrity and practical solutions that fit the PNG environment.</p>
+                        <a href="why-choose.html"
+                            class="mt-auto inline-block text-center border-2 border-primary-green text-primary-green px-8 py-3 rounded-btn font-medium hover:bg-primary-green hover:text-white transition duration-300">Why
+                            Choose G3</a>
+                    </div>
+
+                    <div class="service-card bg-light-bg border-none fade-in"
+                        style="transition-delay:.1s; background-color: #F5F7F6;">
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-3">Talk to our specialists</h3>
+                        <p class="text-text-light-grey mb-6">Our advisors combine mining, telecoms, NGO and corporate
+                            experience — enabling tailored help for your sector.</p>
+                        <a href="contact.html"
+                            class="mt-auto inline-block text-center border-2 border-primary-green text-primary-green px-8 py-3 rounded-btn font-medium hover:bg-primary-green hover:text-white transition duration-300">Contact
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-green text-white/80 py-12 sm:py-16 px-4 mt-auto" role="contentinfo">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">G3 Accounting Limited</h4>
+                    <p class="text-sm leading-relaxed">Expertly Guiding Your Finances since 2014. 100% locally owned
+                        accounting firm in Papua New Guinea.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Services</a></li>
+                        <li><a href="why-choose.html" class="hover:text-white transition duration-200">Why Choose Us</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Services</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Cloud
+                                Accounting</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">ERP
+                                Implementation</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Virtual CFO</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Financing
+                                Support</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Training</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Contact Us</h4>
+                    <div class="text-sm space-y-3 leading-relaxed">
+                        <p class="flex items-start"><i
+                                class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3 min-w-[16px]"></i> PO Box 5070,
+                            Boroko, NCD, Papua New Guinea</p>
+                        <p class="flex items-start"><i class="fas fa-globe text-accent-gold mt-1 mr-3 min-w-[16px]"></i>
+                            21 High St Lutwyche, QLD 4030 (AU)</p>
+                        <p class="flex items-center"><i class="fas fa-phone text-accent-gold mr-3 min-w-[16px]"></i> <a
+                                href="tel:+67571570138" class="hover:text-white transition duration-200">(+675)
+                                71570138</a> / <a href="tel:+67570933885"
+                                class="hover:text-white transition duration-200">70933885</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:g3acct@gmail.com"
+                                class="hover:text-white transition duration-200">g3acct@gmail.com</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:phesiansassociates@gmail.com"
+                                class="hover:text-white transition duration-200">phesiansassociates@gmail.com (AU)</a>
+                        </p>
+
+                        <!-- Social Icons (Accessible links) -->
+                        <div class="pt-3 flex space-x-4">
+                            <a href="https://www.facebook.com/G3AccountingLimited/" 
+                                class="text-white hover:text-accent-gold transition duration-200" aria-label="Find G3 Accounting Limited on Facebook"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f text-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/larry-auakai-94576245"
+                                class="text-white hover:text-accent-gold transition duration-200" aria-label="Find Larry Auakai on LinkedIn"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2025 G3 Accounting Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const toggleButton = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('nav-mobile-menu');
+
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact G3 Accounting Limited - Phone, Email, Office Location and Contact Form." />
+    <title>G3 Accounting Limited - Contact</title>
+
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#1F4028',
+                        'dark-green': '#152e1d',
+                        'accent-gold': '#C19B63',
+                        'cta-gold-btn': '#D2B48C',
+                        'light-bg': '#F5F7F6',
+                        'text-dark': '#2c2c2c',
+                        'text-light-grey': '#6c757d',
+                        'cta-heading-color': '#2D2D2D',
+                        'cta-text-color': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'lg': '12px',
+                        'btn': '30px',
+                    },
+                    transitionProperty: {
+                        'shadow': 'box-shadow',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for multi-select component */
+        .service-selector {
+            position: relative;
+        }
+
+        .service-selector-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            margin-top: 0.25rem;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 50;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .service-selector-dropdown.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        .service-category-header {
+            position: sticky;
+            top: 0;
+            background: #f9fafb;
+            z-index: 10;
+            padding: 0.5rem 0.75rem;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1F4028;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .service-option {
+            padding: 0.625rem 0.75rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            transition: background-color 0.15s ease;
+        }
+
+        .service-option:hover {
+            background-color: #f3f4f6;
+        }
+
+        .service-option.selected {
+            background-color: #f0f9f4;
+        }
+
+        .service-checkbox {
+            width: 1.125rem;
+            height: 1.125rem;
+            border: 2px solid #d1d5db;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.15s ease;
+        }
+
+        .service-option.selected .service-checkbox {
+            background-color: #1F4028;
+            border-color: #1F4028;
+        }
+
+        .service-checkbox-icon {
+            color: white;
+            font-size: 0.625rem;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+
+        .service-option.selected .service-checkbox-icon {
+            opacity: 1;
+        }
+
+        .service-label {
+            font-size: 0.875rem;
+            color: #374151;
+            flex: 1;
+        }
+
+        .service-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            background-color: #1F4028;
+            color: white;
+            padding: 0.375rem 0.625rem;
+            border-radius: 0.375rem;
+            font-size: 0.8125rem;
+            animation: tagSlideIn 0.2s ease;
+        }
+
+        @keyframes tagSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .service-tag-remove {
+            cursor: pointer;
+            padding: 0.125rem;
+            border-radius: 0.125rem;
+            transition: background-color 0.15s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-tag-remove:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .service-tag-remove i {
+            font-size: 0.625rem;
+        }
+
+        .service-selector-input {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .service-tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            min-height: 0;
+            transition: min-height 0.2s ease;
+        }
+
+        .service-tags-container:empty {
+            display: none;
+        }
+
+        .search-input {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 20;
+            padding: 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .search-input input {
+            width: 100%;
+            padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.15s ease;
+        }
+
+        .search-input input:focus {
+            border-color: #C19B63;
+            box-shadow: 0 0 0 3px rgba(193, 155, 99, 0.1);
+        }
+
+        .search-input-wrapper {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        .no-results {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .service-count {
+            background-color: #C19B63;
+            color: white;
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        /* Improved mobile responsiveness */
+        @media (max-width: 640px) {
+            .service-selector-dropdown {
+                max-height: 300px;
+            }
+            
+            .service-tag {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-text-dark flex flex-col min-h-screen">
+
+    <!-- HEADER/NAVIGATION -->
+    <header class="shadow-md bg-white sticky top-0 z-50 fade-in" role="banner">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+            aria-label="Main navigation">
+            <a class="flex items-center" href="index.html">
+                <img src="g3_logo.png" alt="G3 Accounting Limited" class="h-12 w-auto">
+            </a>
+
+            <button
+                class="lg:hidden text-primary-green p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold"
+                aria-controls="nav-mobile-menu" aria-expanded="false" id="mobile-menu-toggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                <ul class="flex space-x-6 items-center" role="menubar">
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="index.html">Home</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="about.html">About</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="services.html">Services</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="why-choose.html">Why Choose Us</a></li>
+                    <li role="none" class="lg:ml-3">
+                        <a class="btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md"
+                            role="menuitem" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="nav-mobile-menu" class="nav-mobile-menu hidden lg:hidden bg-light-bg py-4 border-t border-gray-200">
+            <ul class="flex flex-col space-y-2 px-4" role="menu" aria-labelledby="mobile-menu-toggle">
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="index.html">Home</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="about.html">About</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="services.html">Services</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="why-choose.html">Why Choose Us</a></li>
+                <li role="none">
+                    <a class="block text-center mt-2 btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 shadow-md"
+                        role="menuitem" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-primary-green text-white py-16 sm:py-24 text-center" role="region" aria-labelledby="pageTitle">
+        <div class="container mx-auto px-4">
+            <h1 id="pageTitle" class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium italic mb-4 fade-in">
+                Contact Us</h1>
+            <p class="text-lg sm:text-xl font-light opacity-90 mt-4 fade-in" style="transition-delay:.08s">Get in touch
+                with our team. We're here to help.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main role="main">
+        <section class="py-16 sm:py-24 bg-white px-4">
+            <div class="container mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+
+                    <!-- Contact Form -->
+                    <div class="bg-white p-8 rounded-lg shadow-xl border border-gray-100 fade-in">
+                        <h3 class="font-serif text-2xl font-bold text-primary-green mb-6">Send Us a Message</h3>
+
+                        <form id="contactForm"
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSfzU86rnAMwvNc0I8nvCglR6mYW9iMk2xoXfTyhCi8CWMUlgQ/formResponse"
+                            method="POST" target="hidden_iframe">
+                            <div class="grid gap-6">
+                                <div>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="name">Full
+                                        Name *</label>
+                                    <input
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
+                                        id="name" name="entry.1075435583" type="text" placeholder="John Doe" required>
+                                </div>
+
+                                <div>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="email">Email
+                                        Address *</label>
+                                    <input
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
+                                        id="email" name="entry.2084435980" type="email" placeholder="[email protected]"
+                                        required>
+                                </div>
+
+                                <div>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="phone">Phone
+                                        Number</label>
+                                    <input
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
+                                        id="phone" name="entry.1653012573" type="tel" placeholder="Enter Phone Number">
+                                </div>
+
+                                <!-- Multi-Service Selector Component -->
+                                <div>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="services">
+                                        Services of Interest *
+                                        <span class="text-xs text-gray-500 font-normal ml-1">(Select all that apply)</span>
+                                    </label>
+                                    <div class="service-selector">
+                                        <div 
+                                            class="service-selector-input w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
+                                            id="serviceSelectorInput"
+                                            role="button"
+                                            tabindex="0"
+                                            aria-haspopup="listbox"
+                                            aria-expanded="false"
+                                            aria-labelledby="services"
+                                        >
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-gray-500" id="servicePlaceholder">Select services...</span>
+                                                <i class="fas fa-chevron-down text-gray-400 text-sm transition-transform duration-200" id="dropdownIcon"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Selected Services Tags -->
+                                        <div class="service-tags-container" id="serviceTagsContainer" aria-live="polite" aria-atomic="false"></div>
+                                        
+                                        <!-- Dropdown Menu -->
+                                        <div 
+                                            class="service-selector-dropdown" 
+                                            id="serviceDropdown"
+                                            role="listbox"
+                                            aria-multiselectable="true"
+                                        >
+                                            <!-- Search Input -->
+                                            <div class="search-input">
+                                                <div class="search-input-wrapper">
+                                                    <i class="fas fa-search search-icon"></i>
+                                                    <input 
+                                                        type="text" 
+                                                        id="serviceSearch" 
+                                                        placeholder="Search services..."
+                                                        aria-label="Search services"
+                                                    >
+                                                </div>
+                                            </div>
+
+                                            <!-- Services List -->
+                                            <div id="servicesList"></div>
+                                        </div>
+
+                                        <!-- Hidden input for form submission -->
+                                        <input type="hidden" name="entry.4125290" id="servicesHiddenInput">
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-2">
+                                        <i class="fas fa-info-circle mr-1"></i>
+                                        You can select multiple services by clicking on them
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm"
+                                        for="message">Message *</label>
+                                    <textarea
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold resize-y min-h-[120px]"
+                                        id="message" name="entry.1547678339" rows="5"
+                                        placeholder="Tell us about your needs and how we can help..." required></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full bg-primary-green text-white py-3 px-6 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md">
+                                    <i class="fas fa-paper-plane mr-2"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="success-message"
+                            class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
+                            <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent
+                            successfully. We'll get back to you soon.
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-8 fade-in" style="transition-delay:.1s">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-primary-green mb-4">Get in Touch</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We're here to help you achieve your financial goals. Whether you need accounting
+                                services, tax support, or business consulting, our experienced team is ready to
+                                assist.
+                            </p>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle-custom"><i class="fas fa-user-tie"></i></div>
+                            <div>
+                                <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">Larry Auakai</h5>
+                                <p class="text-gray-600 text-sm">Principal</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle-custom"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">Phone:</h5>
+                                <p class="text-gray-600 text-sm">
+                                    <a href="tel:+67571570138" class="hover:text-primary-green transition">(+675)
+                                        71570138</a> /
+                                    <a href="tel:+67570933885" class="hover:text-primary-green transition">70933885</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle-custom"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">WhatsApp:</h5>
+                                <p class="text-gray-600 text-sm">(+675) 71570138 / 70933885</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle-custom"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">Email:</h5>
+                                <p class="text-gray-600 text-sm"><a href="mailto:[email protected]" class="hover:text-primary-green transition">[email protected]</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle-custom"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">PNG Address:</h5>
+                                <p class="text-gray-600 text-sm">PO Box 5070, Boroko, NCD, Papua New Guinea</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle-custom"><i class="fas fa-globe-asia"></i></div>
+                            <div>
+                                <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">Australian Contact:
+                                </h5>
+                                <p class="text-gray-600 text-sm">21 High St Lutwyche, QLD 4030<br>Email:
+                                    <a href="mailto:[email protected]"
+                                        class="hover:text-primary-green transition">[email protected]</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-green text-white/80 py-12 sm:py-16 px-4 mt-auto" role="contentinfo">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">G3 Accounting Limited</h4>
+                    <p class="text-sm leading-relaxed">Expertly Guiding Your Finances since 2014. 100% locally owned
+                        accounting firm in Papua New Guinea.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Services</a></li>
+                        <li><a href="why-choose.html" class="hover:text-white transition duration-200">Why Choose Us</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Services</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Accounting
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Taxation
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Business
+                                Advisory</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Payroll
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Financial
+                                Reporting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Contact Us</h4>
+                    <div class="text-sm space-y-3 leading-relaxed">
+                        <p class="flex items-start"><i
+                                class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3 min-w-[16px]"></i> PO Box 5070,
+                            Boroko, NCD, Papua New Guinea</p>
+                        <p class="flex items-start"><i class="fas fa-globe text-accent-gold mt-1 mr-3 min-w-[16px]"></i>
+                            21 High St Lutwyche, QLD 4030 (AU)</p>
+                        <p class="flex items-center"><i class="fas fa-phone text-accent-gold mr-3 min-w-[16px]"></i> <a
+                                href="tel:+67571570138" class="hover:text-white transition duration-200">(+675)
+                                71570138</a> / <a href="tel:+67570933885"
+                                class="hover:text-white transition duration-200">70933885</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:[email protected]" class="hover:text-white transition duration-200">[email protected]</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:[email protected]" class="hover:text-white transition duration-200">[email protected]</a> (AU)
+                        </p>
+
+                        <div class="pt-3 flex space-x-4">
+                            <a href="https://www.facebook.com/G3AccountingLimited/"
+                                class="text-white hover:text-accent-gold transition duration-200"
+                                aria-label="Find G3 Accounting Limited on Facebook" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f text-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/larry-auakai-94576245"
+                                class="text-white hover:text-accent-gold transition duration-200"
+                                aria-label="Find Larry Auakai on LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2025 G3 Accounting Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        // Services data organized by categories
+        const servicesData = {
+            "Core Accounting": [
+                "Accounting/Bookkeeping",
+                "Preparation & Analysis of Financial Statements",
+                "Short-term Accounting Support",
+                "Management Reporting",
+                "Financial Controller Services"
+            ],
+            "Compliance & Regulatory": [
+                "Taxation Support Services",
+                "Auditing & Assurance",
+                "Company Secretarial Services",
+                "Company Annual Returns",
+                "IFRS/IAS Technical Support"
+            ],
+            "Advisory & Planning": [
+                "Budgeting & Forecasting",
+                "Business Valuations",
+                "Business Development",
+                "Special Investigations"
+            ],
+            "Specialized Services": [
+                "Trust Administration Services",
+                "Donor Fund Management",
+                "Fixed Assets Management",
+                "ERP Support (MYOB/Pronto)",
+                "Govt Accounting System Support",
+                "Low fee CFO Services"
+            ],
+            "Operational Support": [
+                "Logistics & Transportation Support",
+                "Educational Consultation and Training Services",
+                "Equipment Hire",
+                "Overseas Sourcing & Procurement Agents",
+                "Hire Car Services"
+            ],
+            "Other": [
+                "Other Services (Please specify in message)"
+            ]
+        };
+
+        // Initialize the service selector
+        class ServiceSelector {
+            constructor() {
+                this.selectedServices = new Set();
+                this.allServices = [];
+                this.isOpen = false;
+                
+                // Get DOM elements
+                this.input = document.getElementById('serviceSelectorInput');
+                this.dropdown = document.getElementById('serviceDropdown');
+                this.servicesList = document.getElementById('servicesList');
+                this.tagsContainer = document.getElementById('serviceTagsContainer');
+                this.placeholder = document.getElementById('servicePlaceholder');
+                this.dropdownIcon = document.getElementById('dropdownIcon');
+                this.searchInput = document.getElementById('serviceSearch');
+                this.hiddenInput = document.getElementById('servicesHiddenInput');
+                
+                this.init();
+            }
+            
+            init() {
+                // Build services list
+                this.buildServicesList();
+                
+                // Event listeners
+                this.input.addEventListener('click', () => this.toggleDropdown());
+                this.input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.toggleDropdown();
+                    }
+                });
+                
+                this.searchInput.addEventListener('input', (e) => this.filterServices(e.target.value));
+                this.searchInput.addEventListener('keydown', (e) => e.stopPropagation());
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!this.input.contains(e.target) && !this.dropdown.contains(e.target)) {
+                        this.closeDropdown();
+                    }
+                });
+                
+                // Prevent dropdown close when clicking inside
+                this.dropdown.addEventListener('click', (e) => e.stopPropagation());
+            }
+            
+            buildServicesList() {
+                this.servicesList.innerHTML = '';
+                
+                Object.entries(servicesData).forEach(([category, services]) => {
+                    // Category header
+                    const header = document.createElement('div');
+                    header.className = 'service-category-header';
+                    header.textContent = category;
+                    this.servicesList.appendChild(header);
+                    
+                    // Services in this category
+                    services.forEach(service => {
+                        this.allServices.push(service);
+                        const option = this.createServiceOption(service);
+                        this.servicesList.appendChild(option);
+                    });
+                });
+            }
+            
+            createServiceOption(service) {
+                const option = document.createElement('div');
+                option.className = 'service-option';
+                option.setAttribute('role', 'option');
+                option.setAttribute('aria-selected', 'false');
+                option.dataset.service = service;
+                
+                option.innerHTML = `
+                    <div class="service-checkbox">
+                        <i class="fas fa-check service-checkbox-icon"></i>
+                    </div>
+                    <span class="service-label">${service}</span>
+                `;
+                
+                option.addEventListener('click', () => this.toggleService(service, option));
+                option.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.toggleService(service, option);
+                    }
+                });
+                
+                return option;
+            }
+            
+            toggleService(service, option) {
+                if (this.selectedServices.has(service)) {
+                    this.selectedServices.delete(service);
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-selected', 'false');
+                } else {
+                    this.selectedServices.add(service);
+                    option.classList.add('selected');
+                    option.setAttribute('aria-selected', 'true');
+                }
+                
+                this.updateDisplay();
+                this.updateHiddenInput();
+            }
+            
+            updateDisplay() {
+                // Update placeholder
+                if (this.selectedServices.size > 0) {
+                    this.placeholder.innerHTML = `
+                        <span class="text-primary-green font-medium">${this.selectedServices.size} service${this.selectedServices.size > 1 ? 's' : ''} selected</span>
+                    `;
+                } else {
+                    this.placeholder.innerHTML = '<span class="text-gray-500">Select services...</span>';
+                }
+                
+                // Update tags
+                this.updateTags();
+            }
+            
+            updateTags() {
+                this.tagsContainer.innerHTML = '';
+                
+                this.selectedServices.forEach(service => {
+                    const tag = document.createElement('div');
+                    tag.className = 'service-tag';
+                    tag.innerHTML = `
+                        <span>${service}</span>
+                        <span class="service-tag-remove" data-service="${service}" aria-label="Remove ${service}">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    `;
+                    
+                    tag.querySelector('.service-tag-remove').addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.removeService(service);
+                    });
+                    
+                    this.tagsContainer.appendChild(tag);
+                });
+            }
+            
+            removeService(service) {
+                this.selectedServices.delete(service);
+                
+                // Update the option in the dropdown
+                const option = this.servicesList.querySelector(`[data-service="${service}"]`);
+                if (option) {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-selected', 'false');
+                }
+                
+                this.updateDisplay();
+                this.updateHiddenInput();
+            }
+            
+            updateHiddenInput() {
+                // Update the hidden input with comma-separated values
+                this.hiddenInput.value = Array.from(this.selectedServices).join(', ');
+            }
+            
+            toggleDropdown() {
+                if (this.isOpen) {
+                    this.closeDropdown();
+                } else {
+                    this.openDropdown();
+                }
+            }
+            
+            openDropdown() {
+                this.isOpen = true;
+                this.dropdown.classList.add('active');
+                this.dropdownIcon.style.transform = 'rotate(180deg)';
+                this.input.setAttribute('aria-expanded', 'true');
+                
+                // Focus search input
+                setTimeout(() => this.searchInput.focus(), 100);
+            }
+            
+            closeDropdown() {
+                this.isOpen = false;
+                this.dropdown.classList.remove('active');
+                this.dropdownIcon.style.transform = 'rotate(0deg)';
+                this.input.setAttribute('aria-expanded', 'false');
+                this.searchInput.value = '';
+                this.filterServices('');
+            }
+            
+            filterServices(query) {
+                const lowerQuery = query.toLowerCase();
+                let hasVisibleServices = false;
+                
+                // Get all category headers and service options
+                const categories = this.servicesList.querySelectorAll('.service-category-header');
+                const options = this.servicesList.querySelectorAll('.service-option');
+                
+                // Hide all categories initially
+                categories.forEach(cat => cat.style.display = 'none');
+                
+                // Filter options
+                options.forEach(option => {
+                    const service = option.dataset.service.toLowerCase();
+                    const matches = service.includes(lowerQuery);
+                    option.style.display = matches ? 'flex' : 'none';
+                    
+                    if (matches) {
+                        hasVisibleServices = true;
+                        // Show the category header for this service
+                        let prevElement = option.previousElementSibling;
+                        while (prevElement && !prevElement.classList.contains('service-category-header')) {
+                            prevElement = prevElement.previousElementSibling;
+                        }
+                        if (prevElement) {
+                            prevElement.style.display = 'block';
+                        }
+                    }
+                });
+                
+                // Show/hide no results message
+                let noResultsMsg = this.servicesList.querySelector('.no-results');
+                if (!hasVisibleServices) {
+                    if (!noResultsMsg) {
+                        noResultsMsg = document.createElement('div');
+                        noResultsMsg.className = 'no-results';
+                        noResultsMsg.innerHTML = `
+                            <i class="fas fa-search text-2xl mb-2 opacity-50"></i>
+                            <p>No services found matching "${query}"</p>
+                        `;
+                        this.servicesList.appendChild(noResultsMsg);
+                    }
+                } else if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+            }
+            
+            getSelectedServices() {
+                return Array.from(this.selectedServices);
+            }
+        }
+
+        // Initialize the service selector when DOM is ready
+        let serviceSelector;
+        document.addEventListener('DOMContentLoaded', function() {
+            serviceSelector = new ServiceSelector();
+        });
+
+        // Form submission handling
+        var submitted = false;
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            const button = this.querySelector('button[type="submit"]');
+            const successMessage = document.getElementById('success-message');
+
+            // Log selected services for debugging
+            console.log('Selected services:', serviceSelector.getSelectedServices());
+
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+
+            submitted = true;
+
+            setTimeout(function () {
+                successMessage.classList.remove('hidden');
+                document.getElementById('contactForm').reset();
+                
+                // Reset service selector
+                serviceSelector.selectedServices.clear();
+                serviceSelector.updateDisplay();
+                serviceSelector.updateHiddenInput();
+                
+                button.disabled = false;
+                button.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Send Message';
+
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                    submitted = false;
+                }, 5000);
+            }, 1000);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('nav-mobile-menu');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

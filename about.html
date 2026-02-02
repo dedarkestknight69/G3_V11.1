@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="G3 Accounting Limited - 100% locally-owned Accounting and Business Consulting Company in Papua New Guinea since 2014" />
+    <title>G3 Accounting Limited - About</title>
+    <link rel="canonical" href="about.html" />
+
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#1F4028',
+                        'dark-green': '#152e1d',
+                        'accent-gold': '#C19B63',
+                        'cta-gold-btn': '#D2B48C',
+                        'light-bg': '#F5F7F6',
+                        'text-dark': '#2c2c2c',
+                        'text-light-grey': '#6c757d',
+                        'cta-heading-color': '#2D2D2D',
+                        'cta-text-color': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'lg': '12px',
+                        'btn': '30px',
+                    },
+                    transitionProperty: {
+                        'shadow': 'box-shadow',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="text-text-dark flex flex-col min-h-screen">
+
+    <!-- HEADER/NAVIGATION -->
+    <header class="shadow-md bg-white sticky top-0 z-50 fade-in" role="banner">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+            aria-label="Main navigation">
+            <a class="flex items-center" href="index.html" aria-label="G3 Accounting Limited homepage">
+                <img src="g3_logo.png" alt="G3 Accounting Limited" class="h-12 w-auto">
+            </a>
+
+            <button
+                class="lg:hidden text-primary-green p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold"
+                aria-controls="nav-mobile-menu" aria-expanded="false" id="mobile-menu-toggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                <ul class="flex space-x-6 items-center" role="menubar">
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="index.html">Home</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm active" role="menuitem"
+                            href="about.html">About</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="services.html">Services</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="why-choose.html">Why Choose Us</a></li>
+                    <li role="none" class="lg:ml-3">
+                        <a class="btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md"
+                            role="menuitem" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="nav-mobile-menu" class="nav-mobile-menu hidden lg:hidden bg-light-bg py-4 border-t border-gray-200">
+            <ul class="flex flex-col space-y-2 px-4" role="menu" aria-labelledby="mobile-menu-toggle">
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="index.html">Home</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark active font-medium"
+                        role="menuitem" href="about.html">About</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="services.html">Services</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="why-choose.html">Why Choose Us</a></li>
+                <li role="none">
+                    <a class="block text-center mt-2 btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 shadow-md"
+                        role="menuitem" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-primary-green text-white py-16 sm:py-24 text-center" role="region" aria-label="Page Title">
+        <div class="container mx-auto px-4">
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium italic mb-4 fade-in">About G3 Accounting
+            </h1>
+            <p class="text-lg sm:text-xl font-light opacity-90 fade-in" style="transition-delay:.08s">Expertly guiding
+                your finances since 2014</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main role="main">
+
+        <!-- Experience & Leadership -->
+        <section class="py-16 sm:py-24 bg-white px-4" aria-labelledby="leadership-heading">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <i class="fas fa-briefcase text-4xl text-accent-gold mb-4 fade-in"></i>
+                    <h2 id="leadership-heading" class="font-serif text-3xl font-bold text-primary-green mb-3 fade-in">
+                        Our Experience & Leadership</h2>
+                    <p class="text-text-light-grey text-lg font-light fade-in" style="transition-delay:.08s">Our
+                        partners bring over 10+ years of experience helping clients achieve real business growth.</p>
+                </div>
+
+                <div class="fade-in" style="transition-delay:.16s;">
+                    <div class="bg-white p-8 rounded-lg shadow-xl border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="h-12 w-12 rounded-full bg-light-bg flex items-center justify-center text-accent-gold text-xl mr-4 flex-shrink-0">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl text-primary-green font-bold">Leadership & Expertise</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-text-light-grey leading-relaxed mb-6">
+                            Our consultancy division is led by <span class="font-medium text-text-dark">Larry
+                                Auakai</span>, who brings over <span class="font-medium text-text-dark">20 years of
+                                practical business and financial management experience</span> across PNG and
+                            international markets. His background allows us to deliver high-quality advisory services
+                            built for sustainable growth.
+                        </p>
+
+                        <h5 class="text-primary-green font-semibold text-lg mb-4">Past organisations our team has worked
+                            with include:</h5>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <ul class="space-y-3 text-text-light-grey text-sm">
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i> Saudi
+                                    Telecom</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i>
+                                    Deloitte</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i>
+                                    Newcrest Mining Ltd</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i>
+                                    International Education Agency PNG Ltd</li>
+                            </ul>
+                            <ul class="space-y-3 text-text-light-grey text-sm">
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i> K92
+                                    Mining Ltd</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i> Ok Tedi
+                                    Mining Ltd</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i> Ramu
+                                    Agri Industries</li>
+                                <li class="flex items-center"><i class="fas fa-check text-accent-gold mr-3"></i> Ok Tedi
+                                    Landowners Royalty Trusts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="py-16 sm:py-24 bg-light-bg px-4" aria-labelledby="story-heading">
+            <div class="container mx-auto">
+                <div class="max-w-4xl mx-auto">
+                    <h2 id="story-heading"
+                        class="font-serif text-3xl sm:text-4xl font-bold text-primary-green mb-6 fade-in">Our Story</h2>
+                    <div class="space-y-4 text-text-light-grey leading-relaxed text-lg">
+                        <p class="fade-in" style="transition-delay:.08s">G3 Accounting Limited was established in 2014
+                            with a vision to provide world-class accounting and business consulting services in Papua
+                            New Guinea.</p>
+                        <p class="fade-in" style="transition-delay:.16s">As a 100% locally-owned firm, we understand the
+                            unique challenges and opportunities that businesses face in our region. Our team of
+                            experienced professionals is dedicated to helping our clients navigate complex financial
+                            landscapes.</p>
+                        <p class="fade-in" style="transition-delay:.24s">Over the years, we have grown to serve hundreds
+                            of clients across various industries, from small businesses to large corporations, always
+                            maintaining our commitment to excellence and integrity.</p>
+                    </div>
+                    <div class="mt-8 fade-in" style="transition-delay:.32s">
+                        <a href="contact.html"
+                            class="btn-lg-touch bg-accent-gold text-white px-8 py-3 rounded-btn font-medium inline-block hover:bg-cta-gold-btn transition duration-300 shadow-md">Get
+                            in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="py-16 sm:py-24 bg-white px-4" aria-labelledby="values-heading">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 id="values-heading"
+                        class="font-serif text-3xl sm:text-4xl font-bold text-primary-green mb-3 fade-in">Our Core
+                        Values</h2>
+                    <p class="text-text-light-grey text-lg fade-in" style="transition-delay:.08s">The principles that
+                        guide everything we do</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="about-card fade-in">
+                        <h4 class="font-serif text-xl font-bold text-primary-green mb-3">Integrity</h4>
+                        <p class="text-text-light-grey text-sm leading-relaxed">We uphold the highest ethical standards
+                            in our dealings, ensuring transparency and trust.</p>
+                    </div>
+                    <div class="about-card fade-in" style="transition-delay:.06s">
+                        <h4 class="font-serif text-xl font-bold text-primary-green mb-3">Excellence</h4>
+                        <p class="text-text-light-grey text-sm leading-relaxed">We strive to deliver quality in every
+                            service we provide, delivering quality results consistently.</p>
+                    </div>
+                    <div class="about-card fade-in" style="transition-delay:.12s">
+                        <h4 class="font-serif text-xl font-bold text-primary-green mb-3">Client-Centric</h4>
+                        <p class="text-text-light-grey text-sm leading-relaxed">Our clients' success is our priority. We
+                            tailor our services to meet their unique needs.</p>
+                    </div>
+                    <div class="about-card fade-in" style="transition-delay:.18s">
+                        <h4 class="font-serif text-xl font-bold text-primary-green mb-3">Innovation</h4>
+                        <p class="text-text-light-grey text-sm leading-relaxed">We embrace modern accounting practices
+                            and technology to serve our clients better.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action -->
+        <section class="py-16 bg-light-bg border-t border-gray-200 px-4" aria-labelledby="cta-heading">
+            <div class="container mx-auto text-center">
+                <div class="fade-in mb-6">
+                    <i class="fas fa-comments text-5xl text-accent-gold"></i>
+                </div>
+
+                <h2 id="cta-heading" class="font-serif text-3xl sm:text-4xl italic text-primary-green mb-4 fade-in">
+                    Ready to Work With Us?</h2>
+
+                <p class="text-lg text-cta-text-color mb-8 fade-in" style="transition-delay:.08s">Let's partner together
+                    to achieve your business goals.</p>
+
+                <div class="fade-in space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 flex flex-col sm:flex-row justify-center items-center"
+                    style="transition-delay:.16s;">
+                    <a href="contact.html"
+                        class="btn-lg-touch bg-accent-gold text-white px-8 py-3 rounded-btn font-medium hover:bg-cta-gold-btn transition duration-300 shadow-md">Contact
+                        Us Today</a>
+                    <a href="services.html"
+                        class="btn-lg-touch bg-transparent border-2 border-primary-green text-primary-green px-8 py-3 rounded-btn font-medium hover:bg-primary-green hover:text-white transition duration-300">View
+                        Our Services</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-green text-white/80 py-12 sm:py-16 px-4 mt-auto" role="contentinfo">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">G3 Accounting Limited</h4>
+                    <p class="text-sm leading-relaxed">Expertly Guiding Your Finances since 2014. 100% locally owned
+                        accounting firm in Papua New Guinea.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Services</a></li>
+                        <li><a href="why-choose.html" class="hover:text-white transition duration-200">Why Choose Us</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Services</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Accounting
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Taxation
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Business
+                                Advisory</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Payroll
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Financial
+                                Reporting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Contact Us</h4>
+                    <div class="text-sm space-y-3 leading-relaxed">
+                        <p class="flex items-start"><i
+                                class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3 min-w-[16px]"></i> PO Box 5070,
+                            Boroko, NCD, Papua New Guinea</p>
+                        <p class="flex items-start"><i class="fas fa-globe text-accent-gold mt-1 mr-3 min-w-[16px]"></i>
+                            21 High St Lutwyche, QLD 4030 (AU)</p>
+                        <p class="flex items-center"><i class="fas fa-phone text-accent-gold mr-3 min-w-[16px]"></i> <a
+                                href="tel:+67571570138" class="hover:text-white transition duration-200">(+675)
+                                71570138</a> / <a href="tel:+67570933885"
+                                class="hover:text-white transition duration-200">70933885</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:g3acct@gmail.com"
+                                class="hover:text-white transition duration-200">g3acct@gmail.com</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:phesiansassociates@gmail.com"
+                                class="hover:text-white transition duration-200">phesiansassociates@gmail.com (AU)</a>
+                        </p>
+
+                        <!-- Social Icons (Accessible links) -->
+                        <div class="pt-3 flex space-x-4">
+                            <a href="https://www.facebook.com/G3AccountingLimited/" 
+                                class="text-white hover:text-accent-gold transition duration-200" aria-label="Find G3 Accounting Limited on Facebook"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f text-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/larry-auakai-94576245"
+                                class="text-white hover:text-accent-gold transition duration-200" aria-label="Find Larry Auakai on LinkedIn"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2025 G3 Accounting Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const toggleButton = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('nav-mobile-menu');
+
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
+

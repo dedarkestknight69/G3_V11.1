@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="G3 Accounting Limited - 100% locally-owned Accounting and Business Consulting Company in Papua New Guinea. Expertly guiding your finances." />
+    <meta name="keywords"
+        content="Accounting, Business Consulting, Papua New Guinea, PNG, Financial Reporting, Taxation" />
+    <meta name="author" content="G3 Accounting Limited" />
+    <link rel="canonical" href="index.html" />
+    <title>G3 Accounting Limited - Expertly Guiding Your Finances</title>
+
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#1F4028',
+                        'dark-green': '#152e1d',
+                        'accent-gold': '#C19B63',
+                        'cta-gold-btn': '#D2B48C',
+                        'light-bg': '#F5F7F6',
+                        'text-dark': '#2c2c2c',
+                        'text-light-grey': '#6c757d',
+                        'cta-heading-color': '#2D2D2D',
+                        'cta-text-color': '#555555',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'lg': '12px',
+                        'btn': '30px',
+                    },
+                    transitionProperty: {
+                        'shadow': 'box-shadow',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="text-text-dark">
+    <!-- HEADER/NAVIGATION -->
+    <header class="shadow-md bg-white sticky top-0 z-50 fade-in" role="banner">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+            aria-label="Main navigation">
+            <a class="flex items-center" href="index.html" aria-label="G3 Accounting Limited homepage">
+                <img src="g3_logo.png" alt="G3 Accounting Limited - Expertly Guiding Your Finances" class="h-12 w-auto">
+            </a>
+
+            <button
+                class="lg:hidden text-primary-green p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold"
+                aria-controls="nav-mobile-menu" aria-expanded="false" id="mobile-menu-toggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <div class="hidden lg:flex lg:items-center lg:space-x-4">
+                <ul class="flex space-x-6 items-center" role="menubar">
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm active" role="menuitem"
+                            href="index.html">Home</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="about.html">About</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="services.html">Services</a></li>
+                    <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+                            href="why-choose.html">Why Choose Us</a></li>
+                    <li role="none" class="lg:ml-3">
+                        <a class="btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md"
+                            role="menuitem" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="nav-mobile-menu" class="nav-mobile-menu hidden lg:hidden bg-light-bg py-4 border-t border-gray-200">
+            <ul class="flex flex-col space-y-2 px-4" role="menu" aria-labelledby="mobile-menu-toggle">
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark active font-medium"
+                        role="menuitem" href="index.html">Home</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="about.html">About</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="services.html">Services</a></li>
+                <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+                        href="why-choose.html">Why Choose Us</a></li>
+                <li role="none">
+                    <a class="block text-center mt-2 btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 shadow-md"
+                        role="menuitem" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero min-h-[55vh] flex items-center bg-primary-green text-white text-center py-16 px-4"
+        role="region" aria-label="Hero Introduction">
+        <div class="container mx-auto">
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal italic mb-4 fade-in">Expertly Guiding
+                Your Finances</h1>
+            <p class="text-lg sm:text-xl font-light opacity-90 mb-8 fade-in" style="transition-delay:.08s">100%
+                locally-owned Accounting and Business Consulting Company serving Papua New Guinea</p>
+            <div class="space-x-4 fade-in" style="transition-delay:.16s">
+                <a href="contact.html"
+                    class="btn-lg-touch bg-accent-gold text-white px-8 py-3 rounded-btn font-medium inline-block hover:bg-dark-green hover:border-dark-green border-2 border-accent-gold transition duration-300 shadow-lg"
+                    aria-label="Get Started with our services">Get Started</a>
+                <a href="services.html"
+                    class="btn-lg-touch bg-transparent border-2 border-white text-white px-8 py-3 rounded-btn font-medium inline-block hover:bg-white hover:text-primary-green transition duration-300"
+                    aria-label="Learn More about our services">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCOUNTING SERVICES SECTION -->
+    <section class="py-16 sm:py-24 bg-light-bg px-4" role="region" aria-labelledby="accounting-services-heading">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in" style="transition-delay:0s">
+                    <h2 id="accounting-services-heading"
+                        class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold italic mb-4 text-primary-green">
+                        Accounting Services</h2>
+                    <p class="text-lg text-text-dark mb-4">
+                        G3 Accounting Limited provides reliable, timely, and accurate accounting and business consulting
+                        services in Port Moresby, Papua New Guinea.
+                    </p>
+                    <p class="text-text-light-grey mb-6">
+                        We are committed to helping PNG businesses grow and thrive with solid financial foundations. Our
+                        comprehensive services are tailored to meet the unique compliance and operational needs of the
+                        PNG market.
+                    </p>
+                    <a href="services.html"
+                        class="btn-lg-touch bg-primary-green text-white px-8 py-3 rounded-btn font-medium inline-block hover:bg-dark-green transition duration-300 shadow-md"
+                        aria-label="Explore All Our Services">Explore All Services</a>
+                </div>
+
+                <div class="fade-in" style="transition-delay:.15s">
+                    <div class="bg-white p-6 sm:p-10 rounded-lg shadow-xl border border-gray-200 h-full">
+                        <h3 class="font-serif text-2xl font-bold mb-6 text-accent-gold">Key Areas of Expertise</h3>
+                        <ul class="service-list list-none p-0 text-text-dark" role="list">
+                            <li class="flex items-start text-base"><i
+                                    class="fas fa-book text-accent-gold text-xl mr-4 mt-1 min-w-[24px] text-center"
+                                    aria-hidden="true"></i> Bookkeeping</li>
+                            <li class="flex items-start text-base"><i
+                                    class="fas fa-users-cog text-accent-gold text-xl mr-4 mt-1 min-w-[24px]"
+                                    aria-hidden="true"></i> Payroll Services</li>
+                            <li class="flex items-start text-base"><i
+                                    class="fas fa-exchange-alt text-accent-gold text-xl mr-4 mt-1 min-w-[24px]"
+                                    aria-hidden="true"></i> Reconciliations (Bank, Creditor, Debtor)</li>
+                            <li class="flex items-start text-base"><i
+                                    class="fas fa-chart-bar text-accent-gold text-xl mr-4 mt-1 min-w-[24px]"
+                                    aria-hidden="true"></i> Financial Reporting & Analysis</li>
+                            <li class="flex items-start text-base"><i
+                                    class="fas fa-file-invoice-dollar text-accent-gold text-xl mr-4 mt-1 min-w-[24px]"
+                                    aria-hidden="true"></i> Taxation Services & Compliance</li>
+                            <li class="flex items-start text-base"><i
+                                    class="fas fa-lightbulb text-accent-gold text-xl mr-4 mt-1 min-w-[24px]"
+                                    aria-hidden="true"></i> Business Advisory & Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES WE SERVE SECTION -->
+    <section class="py-16 sm:py-24 bg-white px-4" role="region" aria-labelledby="industries-heading">
+        <div class="container mx-auto text-center">
+            <h2 id="industries-heading" class="font-serif text-3xl font-bold mb-2 text-primary-green fade-in">Industries
+                We Serve</h2>
+            <p class="text-text-light-grey mb-8 fade-in" style="transition-delay: 0.05s">Trusted by businesses across
+                various sectors</p>
+
+            <div class="flex flex-wrap justify-center mt-6 fade-in" style="transition-delay:.08s">
+                <div
+                    class="bg-white p-3 sm:p-4 rounded-lg shadow-md m-2 font-medium text-primary-green border border-gray-100 transition duration-300 hover:shadow-lg industry-tag flex items-center">
+                    <i class="fas fa-chart-pie text-accent-gold mr-2" aria-hidden="true"></i> Finance
+                </div>
+                <div
+                    class="bg-white p-3 sm:p-4 rounded-lg shadow-md m-2 font-medium text-primary-green border border-gray-100 transition duration-300 hover:shadow-lg industry-tag flex items-center">
+                    <i class="fas fa-truck text-accent-gold mr-2" aria-hidden="true"></i> Transportation
+                </div>
+                <div
+                    class="bg-white p-3 sm:p-4 rounded-lg shadow-md m-2 font-medium text-primary-green border border-gray-100 transition duration-300 hover:shadow-lg industry-tag flex items-center">
+                    <i class="fas fa-laptop-code text-accent-gold mr-2" aria-hidden="true"></i> Technology
+                </div>
+                <div
+                    class="bg-white p-3 sm:p-4 rounded-lg shadow-md m-2 font-medium text-primary-green border border-gray-100 transition duration-300 hover:shadow-lg industry-tag flex items-center">
+                    <i class="fas fa-graduation-cap text-accent-gold mr-2" aria-hidden="true"></i> Education
+                </div>
+                <div
+                    class="bg-white p-3 sm:p-4 rounded-lg shadow-md m-2 font-medium text-primary-green border border-gray-100 transition duration-300 hover:shadow-lg industry-tag flex items-center">
+                    <i class="fas fa-hands-helping text-accent-gold mr-2" aria-hidden="true"></i> Non-Profit
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="py-12 sm:py-16 bg-white border-t border-gray-200 px-4" role="region" aria-labelledby="cta-heading">
+        <div class="container mx-auto text-center">
+            <div class="max-w-3xl mx-auto p-6 sm:p-10 border border-gray-200 rounded-lg shadow-xl">
+                <div class="fade-in inline-block p-5 rounded-full bg-accent-gold/10 mb-4" style="transition-delay:0s">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5" class="text-accent-gold w-8 h-8 sm:w-10 sm:h-10">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M20.25 10.5h-4.204a2.725 2.725 0 01-1.378-2.348V4.5M15.75 10.5L12 14.25M4.5 9.75V15a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25v-5.25A2.25 2.25 0 0017.25 7.5H6.75A2.25 2.25 0 004.5 9.75z" />
+                    </svg>
+                </div>
+                <h2 id="cta-heading"
+                    class="fade-in font-serif text-3xl sm:text-4xl font-normal italic mb-3 text-cta-heading-color"
+                    style="transition-delay:0.1s">Start the Conversation Today</h2>
+                <p class="text-lg mb-6 text-cta-text-color fade-in" style="transition-delay:0.2s;">Contact our team to
+                    discuss your accounting needs and get a customized solution.</p>
+                <a href="contact.html"
+                    class="btn-lg-touch bg-cta-gold-btn text-white px-10 py-3 rounded-btn font-medium inline-block hover:bg-accent-gold transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
+                    style="transition-delay:0.3s" aria-label="Request a Consultation with our team">Request a
+                    Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary-green text-white/80 py-12 sm:py-16 px-4" role="contentinfo">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">G3 Accounting Limited</h4>
+                    <p class="text-sm leading-relaxed">Expertly Guiding Your Finances since 2014. 100% locally owned
+                        accounting firm in Papua New Guinea.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Services</a></li>
+                        <li><a href="why-choose.html" class="hover:text-white transition duration-200">Why Choose Us</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Services</h4>
+                    <ul class="list-none p-0 text-sm space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Accounting
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Taxation
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Business
+                                Advisory</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Payroll
+                                Services</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-200">Financial
+                                Reporting</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-white mb-4">Contact Us</h4>
+                    <div class="text-sm space-y-3 leading-relaxed">
+                        <p class="flex items-start"><i
+                                class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3 min-w-[16px]"></i> PO Box 5070,
+                            Boroko, NCD, Papua New Guinea</p>
+                        <p class="flex items-start"><i class="fas fa-globe text-accent-gold mt-1 mr-3 min-w-[16px]"></i>
+                            21 High St Lutwyche, QLD 4030 (AU)</p>
+                        <p class="flex items-center"><i class="fas fa-phone text-accent-gold mr-3 min-w-[16px]"></i> <a
+                                href="tel:+67571570138" class="hover:text-white transition duration-200">(+675)
+                                71570138</a> / <a href="tel:+67570933885"
+                                class="hover:text-white transition duration-200">70933885</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:g3acct@gmail.com"
+                                class="hover:text-white transition duration-200">g3acct@gmail.com</a></p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
+                            <a href="mailto:phesiansassociates@gmail.com"
+                                class="hover:text-white transition duration-200">phesiansassociates@gmail.com (AU)</a>
+                        </p>
+                        
+                        <!-- Social Icons (Accessible links) -->
+                        <div class="pt-3 flex space-x-4">
+                            <a href="https://www.facebook.com/G3AccountingLimited/" 
+                                class="text-white hover:text-accent-gold transition duration-200" aria-label="Find G3 Accounting Limited on Facebook"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f text-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/larry-auakai-94576245" 
+                               class="text-white hover:text-accent-gold transition duration-200" aria-label="Find Larry Auakai on LinkedIn"
+                               target="_blank" rel="noopener noreferrer">
+                               <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2025 G3 Accounting Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const toggleButton = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('nav-mobile-menu');
+
+        toggleButton.addEventListener('click', () => {
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+
+</html>
