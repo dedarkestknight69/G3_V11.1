@@ -166,6 +166,7 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -267,7 +268,7 @@
             .service-selector-dropdown {
                 max-height: 300px;
             }
-            
+
             .service-tag {
                 font-size: 0.75rem;
                 padding: 0.25rem 0.5rem;
@@ -361,14 +362,17 @@
                                 </div>
 
                                 <div>
-                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="email">Email Address *</label>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="email">Email
+                                        Address *</label>
                                     <input
                                         class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
-                                        id="email" name="entry.1177801236" type="email" placeholder="[email protected]" required>
+                                        id="email" name="entry.1177801236" type="email" placeholder="[email protected]"
+                                        required>
                                 </div>
 
                                 <div>
-                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="phone">Phone Number</label>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm" for="phone">Phone
+                                        Number</label>
                                     <input
                                         class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
                                         id="phone" name="entry.572435245" type="tel" placeholder="Enter Phone Number">
@@ -378,44 +382,34 @@
                                 <div>
                                     <label class="block text-primary-green font-medium mb-1 text-sm" for="services">
                                         Services of Interest *
-                                        <span class="text-xs text-gray-500 font-normal ml-1">(Select all that apply)</span>
+                                        <span class="text-xs text-gray-500 font-normal ml-1">(Select all that
+                                            apply)</span>
                                     </label>
                                     <div class="service-selector">
-                                        <div 
-                                            class="service-selector-input w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
-                                            id="serviceSelectorInput"
-                                            role="button"
-                                            tabindex="0"
-                                            aria-haspopup="listbox"
-                                            aria-expanded="false"
-                                            aria-labelledby="services"
-                                        >
+                                        <div class="service-selector-input w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold"
+                                            id="serviceSelectorInput" role="button" tabindex="0" aria-haspopup="listbox"
+                                            aria-expanded="false" aria-labelledby="services">
                                             <div class="flex items-center justify-between">
-                                                <span class="text-gray-500" id="servicePlaceholder">Select services...</span>
-                                                <i class="fas fa-chevron-down text-gray-400 text-sm transition-transform duration-200" id="dropdownIcon"></i>
+                                                <span class="text-gray-500" id="servicePlaceholder">Select
+                                                    services...</span>
+                                                <i class="fas fa-chevron-down text-gray-400 text-sm transition-transform duration-200"
+                                                    id="dropdownIcon"></i>
                                             </div>
                                         </div>
-                                        
+
                                         <!-- Selected Services Tags -->
-                                        <div class="service-tags-container" id="serviceTagsContainer" aria-live="polite" aria-atomic="false"></div>
-                                        
+                                        <div class="service-tags-container" id="serviceTagsContainer" aria-live="polite"
+                                            aria-atomic="false"></div>
+
                                         <!-- Dropdown Menu -->
-                                        <div 
-                                            class="service-selector-dropdown" 
-                                            id="serviceDropdown"
-                                            role="listbox"
-                                            aria-multiselectable="true"
-                                        >
+                                        <div class="service-selector-dropdown" id="serviceDropdown" role="listbox"
+                                            aria-multiselectable="true">
                                             <!-- Search Input -->
                                             <div class="search-input">
                                                 <div class="search-input-wrapper">
                                                     <i class="fas fa-search search-icon"></i>
-                                                    <input 
-                                                        type="text" 
-                                                        id="serviceSearch" 
-                                                        placeholder="Search services..."
-                                                        aria-label="Search services"
-                                                    >
+                                                    <input type="text" id="serviceSearch"
+                                                        placeholder="Search services..." aria-label="Search services">
                                                 </div>
                                             </div>
 
@@ -432,13 +426,15 @@
                                     </p>
                                 </div>
 
-                            <div>
-                                <label class="block text-primary-green font-medium mb-1 text-sm" for="message">Message *</label>
-                                <textarea
-                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold resize-y min-h-[120px]"
-                                    id="message" name="entry.1390776653" rows="5" placeholder="Tell us about your needs and how we can help..."
-                                    required></textarea>
-                            </div>
+                                <div>
+                                    <label class="block text-primary-green font-medium mb-1 text-sm"
+                                        for="message">Message *</label>
+                                    <textarea
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold resize-y min-h-[120px]"
+                                        id="message" name="entry.1390776653" rows="5"
+                                        placeholder="Tell us about your needs and how we can help..."
+                                        required></textarea>
+                                </div>
 
                                 <button type="submit"
                                     class="w-full bg-primary-green text-white py-3 px-6 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md">
@@ -497,7 +493,9 @@
                             <div class="icon-circle-custom"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">Email:</h5>
-                                <p class="text-gray-600 text-sm"><a href="mailto:[email protected]" class="hover:text-primary-green transition">[email protected]</a></p>
+                                <p class="text-gray-600 text-sm"><a
+                                        href="/cdn-cgi/l/email-protection#0d5668606c64612d7d7f6279686e79686950"
+                                        class="hover:text-primary-green transition">[email protected]</a></p>
                             </div>
                         </div>
 
@@ -515,7 +513,7 @@
                                 <h5 class="font-serif text-lg font-semibold text-primary-green mb-1">Australian Contact:
                                 </h5>
                                 <p class="text-gray-600 text-sm">21 High St Lutwyche, QLD 4030<br>Email:
-                                    <a href="mailto:[email protected]"
+                                    <a href="/cdn-cgi/l/email-protection#b8e3ddd5d9d1d498c8cad7ccdddbccdddce5"
                                         class="hover:text-primary-green transition">[email protected]</a>
                                 </p>
                             </div>
@@ -577,9 +575,12 @@
                                 71570138</a> / <a href="tel:+67570933885"
                                 class="hover:text-white transition duration-200">70933885</a></p>
                         <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
-                            <a href="mailto:[email protected]" class="hover:text-white transition duration-200">[email protected]</a></p>
+                            <a href="/cdn-cgi/l/email-protection#a9f2ccc4c8c0c589d9dbc6ddcccaddcccdf4"
+                                class="hover:text-white transition duration-200">[email protected]</a>
+                        </p>
                         <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i>
-                            <a href="mailto:[email protected]" class="hover:text-white transition duration-200">[email protected]</a> (AU)
+                            <a href="/cdn-cgi/l/email-protection#a3f8c6cec2cacf83d3d1ccd7c6c0d7c6c7fe"
+                                class="hover:text-white transition duration-200">[email protected]</a> (AU)
                         </p>
 
                         <div class="pt-3 flex space-x-4">
@@ -607,6 +608,7 @@
     <!-- Hidden iframe for form submission -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Services data organized by categories
         const servicesData = {
@@ -656,7 +658,7 @@
                 this.selectedServices = new Set();
                 this.allServices = [];
                 this.isOpen = false;
-                
+
                 // Get DOM elements
                 this.input = document.getElementById('serviceSelectorInput');
                 this.dropdown = document.getElementById('serviceDropdown');
@@ -666,14 +668,14 @@
                 this.dropdownIcon = document.getElementById('dropdownIcon');
                 this.searchInput = document.getElementById('serviceSearch');
                 this.hiddenInput = document.getElementById('servicesHiddenInput');
-                
+
                 this.init();
             }
-            
+
             init() {
                 // Build services list
                 this.buildServicesList();
-                
+
                 // Event listeners
                 this.input.addEventListener('click', () => this.toggleDropdown());
                 this.input.addEventListener('keydown', (e) => {
@@ -682,31 +684,31 @@
                         this.toggleDropdown();
                     }
                 });
-                
+
                 this.searchInput.addEventListener('input', (e) => this.filterServices(e.target.value));
                 this.searchInput.addEventListener('keydown', (e) => e.stopPropagation());
-                
+
                 // Close dropdown when clicking outside
                 document.addEventListener('click', (e) => {
                     if (!this.input.contains(e.target) && !this.dropdown.contains(e.target)) {
                         this.closeDropdown();
                     }
                 });
-                
+
                 // Prevent dropdown close when clicking inside
                 this.dropdown.addEventListener('click', (e) => e.stopPropagation());
             }
-            
+
             buildServicesList() {
                 this.servicesList.innerHTML = '';
-                
+
                 Object.entries(servicesData).forEach(([category, services]) => {
                     // Category header
                     const header = document.createElement('div');
                     header.className = 'service-category-header';
                     header.textContent = category;
                     this.servicesList.appendChild(header);
-                    
+
                     // Services in this category
                     services.forEach(service => {
                         this.allServices.push(service);
@@ -715,21 +717,21 @@
                     });
                 });
             }
-            
+
             createServiceOption(service) {
                 const option = document.createElement('div');
                 option.className = 'service-option';
                 option.setAttribute('role', 'option');
                 option.setAttribute('aria-selected', 'false');
                 option.dataset.service = service;
-                
+
                 option.innerHTML = `
                     <div class="service-checkbox">
                         <i class="fas fa-check service-checkbox-icon"></i>
                     </div>
                     <span class="service-label">${service}</span>
                 `;
-                
+
                 option.addEventListener('click', () => this.toggleService(service, option));
                 option.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -737,10 +739,10 @@
                         this.toggleService(service, option);
                     }
                 });
-                
+
                 return option;
             }
-            
+
             toggleService(service, option) {
                 if (this.selectedServices.has(service)) {
                     this.selectedServices.delete(service);
@@ -751,11 +753,11 @@
                     option.classList.add('selected');
                     option.setAttribute('aria-selected', 'true');
                 }
-                
+
                 this.updateDisplay();
                 this.updateHiddenInput();
             }
-            
+
             updateDisplay() {
                 // Update placeholder
                 if (this.selectedServices.size > 0) {
@@ -765,14 +767,14 @@
                 } else {
                     this.placeholder.innerHTML = '<span class="text-gray-500">Select services...</span>';
                 }
-                
+
                 // Update tags
                 this.updateTags();
             }
-            
+
             updateTags() {
                 this.tagsContainer.innerHTML = '';
-                
+
                 this.selectedServices.forEach(service => {
                     const tag = document.createElement('div');
                     tag.className = 'service-tag';
@@ -782,35 +784,35 @@
                             <i class="fas fa-times"></i>
                         </span>
                     `;
-                    
+
                     tag.querySelector('.service-tag-remove').addEventListener('click', (e) => {
                         e.stopPropagation();
                         this.removeService(service);
                     });
-                    
+
                     this.tagsContainer.appendChild(tag);
                 });
             }
-            
+
             removeService(service) {
                 this.selectedServices.delete(service);
-                
+
                 // Update the option in the dropdown
                 const option = this.servicesList.querySelector(`[data-service="${service}"]`);
                 if (option) {
                     option.classList.remove('selected');
                     option.setAttribute('aria-selected', 'false');
                 }
-                
+
                 this.updateDisplay();
                 this.updateHiddenInput();
             }
-            
+
             updateHiddenInput() {
                 // Update the hidden input with comma-separated values
                 this.hiddenInput.value = Array.from(this.selectedServices).join(', ');
             }
-            
+
             toggleDropdown() {
                 if (this.isOpen) {
                     this.closeDropdown();
@@ -818,17 +820,17 @@
                     this.openDropdown();
                 }
             }
-            
+
             openDropdown() {
                 this.isOpen = true;
                 this.dropdown.classList.add('active');
                 this.dropdownIcon.style.transform = 'rotate(180deg)';
                 this.input.setAttribute('aria-expanded', 'true');
-                
+
                 // Focus search input
                 setTimeout(() => this.searchInput.focus(), 100);
             }
-            
+
             closeDropdown() {
                 this.isOpen = false;
                 this.dropdown.classList.remove('active');
@@ -837,24 +839,24 @@
                 this.searchInput.value = '';
                 this.filterServices('');
             }
-            
+
             filterServices(query) {
                 const lowerQuery = query.toLowerCase();
                 let hasVisibleServices = false;
-                
+
                 // Get all category headers and service options
                 const categories = this.servicesList.querySelectorAll('.service-category-header');
                 const options = this.servicesList.querySelectorAll('.service-option');
-                
+
                 // Hide all categories initially
                 categories.forEach(cat => cat.style.display = 'none');
-                
+
                 // Filter options
                 options.forEach(option => {
                     const service = option.dataset.service.toLowerCase();
                     const matches = service.includes(lowerQuery);
                     option.style.display = matches ? 'flex' : 'none';
-                    
+
                     if (matches) {
                         hasVisibleServices = true;
                         // Show the category header for this service
@@ -867,7 +869,7 @@
                         }
                     }
                 });
-                
+
                 // Show/hide no results message
                 let noResultsMsg = this.servicesList.querySelector('.no-results');
                 if (!hasVisibleServices) {
@@ -884,7 +886,7 @@
                     noResultsMsg.remove();
                 }
             }
-            
+
             getSelectedServices() {
                 return Array.from(this.selectedServices);
             }
@@ -892,7 +894,7 @@
 
         // Initialize the service selector when DOM is ready
         let serviceSelector;
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             serviceSelector = new ServiceSelector();
         });
 
@@ -914,12 +916,12 @@
             setTimeout(function () {
                 successMessage.classList.remove('hidden');
                 document.getElementById('contactForm').reset();
-                
+
                 // Reset service selector
                 serviceSelector.selectedServices.clear();
                 serviceSelector.updateDisplay();
                 serviceSelector.updateHiddenInput();
-                
+
                 button.disabled = false;
                 button.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Send Message';
 
@@ -933,9 +935,9 @@
         // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const mobileMenu = document.getElementById('nav-mobile-menu');
-        
+
         if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.addEventListener('click', function () {
                 const isExpanded = this.getAttribute('aria-expanded') === 'true';
                 this.setAttribute('aria-expanded', !isExpanded);
                 mobileMenu.classList.toggle('hidden');
